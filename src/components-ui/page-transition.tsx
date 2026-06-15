@@ -7,5 +7,5 @@ type PageTransitionProps = PropsWithChildren<{
 }>
 
 export const PageTransition = ({ children, className }: PageTransitionProps) => {
-  return <div className={cn('page-transition relative')}>{children}</div>
+  return <div className={cn('page-transition relative', className)}>{children}</div>
 }

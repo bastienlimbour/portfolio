@@ -14,10 +14,14 @@ export default defineType({
     }),
     defineField({
       name: 'iconName',
-      title: `Nom de l'icone (dossier icons/social-icons)`,
+      title: `Nom de l'icône Iconify`,
+      description: `Exemples : simple-icons:github, simple-icons:linkedin, simple-icons:x`,
       type: 'string',
       validation: (rule) =>
-        rule.required().min(1).max(90).error('Min 1 charactères, Max 90 charactères'),
+        rule
+          .required()
+          .regex(/^[a-z0-9-]+:[a-z0-9-]+$/)
+          .error('Format attendu : collection:nom'),
     }),
     defineField({
       name: 'url',

@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import { DynamicIcon } from '@/components-ui/dynamic-icon'
 import { cn } from '@/lib/utils/classname'
 
 import type { Techno } from '@/types/sanity-models/techno'
@@ -11,18 +11,12 @@ export const ProjectTechno = ({ techno }: ProjectTechnoProps) => {
   return (
     <div
       className={cn(
-        'rounded-full py-1 px-2 shadow-sm',
+        'rounded-full px-2 py-1 shadow-sm',
         'flex items-center gap-2',
         'border border-grey-50 bg-white dark:border-grey-700 dark:bg-grey-700',
       )}
     >
-      <Image
-        className={cn('h-4 w-4 rounded-full object-contain')}
-        src={`/assets/icons/dev-icons/${techno.iconName}.svg`}
-        alt={`Logo ${techno.title}`}
-        width={64}
-        height={64}
-      />
+      <DynamicIcon iconName={techno.iconName} label={`Logo ${techno.title}`} className='h-4 w-4' />
       <p className={cn('text-xs font-normal')}>{techno.title}</p>
     </div>
   )

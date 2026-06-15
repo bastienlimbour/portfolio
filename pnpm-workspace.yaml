@@ -1,0 +1,6 @@
+allowBuilds:
+  esbuild: true
+  react-tsparticles: true
+  sharp: true
+  tsparticles-engine: true
+  unrs-resolver: true

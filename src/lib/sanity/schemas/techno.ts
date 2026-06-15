@@ -21,9 +21,14 @@ export default defineType({
     }),
     defineField({
       name: 'iconName',
-      title: `Nom de l'icone (dossier icons/dev-icons)`,
+      title: `Nom de l'icône Iconify`,
+      description: `Exemples : devicon:react, devicon:typescript, logos:nextjs-icon`,
       type: 'string',
-      validation: (rule) => rule.required().error('Champ requis'),
+      validation: (rule) =>
+        rule
+          .required()
+          .regex(/^[a-z0-9-]+:[a-z0-9-]+$/)
+          .error('Format attendu : collection:nom'),
     }),
     // defineField({
     //   name: 'priority',

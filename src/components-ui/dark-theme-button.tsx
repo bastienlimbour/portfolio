@@ -11,7 +11,7 @@ type DarkThemeButtonProps = {
 
 export const DarkThemeButton = ({ className }: DarkThemeButtonProps) => {
   const [mounted, setMounted] = useState(false)
-  const { theme, resolvedTheme, setTheme } = useTheme()
+  const { resolvedTheme, setTheme } = useTheme()
 
   const toggleTheme = () => {
     if (resolvedTheme === 'dark') {

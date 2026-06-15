@@ -2,7 +2,7 @@
 
 import { NextStudio } from 'next-sanity/studio'
 
-import config from '@/root/sanity.config'
+import config from '../../../../../sanity.config'
 
 export const StudioRoute = () => {
   return <NextStudio config={config} />

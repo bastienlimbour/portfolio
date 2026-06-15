@@ -3,14 +3,7 @@
   "version": "1.0.0",
   "packageManager": "pnpm@11.1.3",
   "private": true,
-  "description": "Bastien Pruvost Portfolio",
-  "keywords": [],
-  "homepage": "https://github.com/bastien-pruvost/portfolio#readme",
   "license": "MIT",
-  "author": {
-    "name": "Bastien Pruvost",
-    "url": "https://github.com/bastien-pruvost"
-  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",

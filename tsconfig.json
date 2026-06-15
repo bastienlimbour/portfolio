@@ -16,8 +16,7 @@
     "module": "esnext",
     "moduleResolution": "node",
     "jsx": "preserve",
-
-    // "incremental": true,
+    "incremental": true,
 
     // Strictness
     "strict": true,

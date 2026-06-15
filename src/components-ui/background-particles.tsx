@@ -2,7 +2,7 @@
 
 import { useCallback } from 'react'
 import { useTheme } from 'next-themes'
-import { loadFull } from 'tsparticles'
+import { loadSlim } from 'tsparticles-slim'
 import Particles from 'react-tsparticles'
 
 import { cn } from '@/lib/utils/classname'
@@ -11,12 +11,7 @@ import type { Engine, IOptions, RecursivePartial } from 'tsparticles-engine'
 
 export const BackgroundParticles = () => {
   const particlesInit = useCallback(async (engine: Engine) => {
-    // console.log(engine)
-
-    // you can initialize the tsParticles instance (engine) here, adding custom shapes or presets
-    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-    // starting from v2 you can add only the features you need reducing the bundle size
-    await loadFull(engine)
+    await loadSlim(engine)
   }, [])
 
   // const particlesLoaded = useCallback(async (container: Container | undefined) => {
@@ -31,7 +26,7 @@ export const BackgroundParticles = () => {
   return (
     <Particles
       id='tsparticles'
-      className={cn('animation-entry-particles fixed top-0 left-0 -z-[1] h-screen w-screen')}
+      className={cn('animation-entry-particles fixed left-0 top-0 -z-[1] h-screen w-screen')}
       init={particlesInit}
       options={
         {

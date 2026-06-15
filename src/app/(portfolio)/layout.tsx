@@ -2,7 +2,7 @@ import '@/assets/styles/globals.css'
 import { Poppins } from 'next/font/google'
 
 import { Providers } from '@/components-providers/providers'
-import { BackgroundParticles } from '@/components-ui/background-particles'
+import { BackgroundParticlesLoader } from '@/components-ui/background-particles-loader'
 import { Banner } from '@/components/banner'
 import { Navbar } from '@/components/navbar'
 import { pageDetailsQuery } from '@/lib/sanity/queries/page-details'
@@ -67,7 +67,7 @@ const HomeLayout = async ({ children }: PropsWithChildren) => {
           poppins.className,
         )}
       >
-        <BackgroundParticles />
+        <BackgroundParticlesLoader />
         <div
           className={cn(
             'relative h-full w-full p-4 md:p-8',

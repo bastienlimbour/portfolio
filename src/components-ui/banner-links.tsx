@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { HiOutlineChatBubbleOvalLeftEllipsis, HiOutlineArrowDownOnSquare } from 'react-icons/hi2'
+import { HiOutlineArrowDownOnSquare, HiOutlineChatBubbleOvalLeftEllipsis } from 'react-icons/hi2'
 
 import { cn } from '@/lib/utils/classname'
 
@@ -21,10 +21,10 @@ export const BannerLinks = ({ className, resume }: BannerLinksProps) => {
       <Link
         className={cn([
           'flex w-full items-center justify-center gap-3 rounded-bl-md border-t py-4 sm:border-r md:border-r-0',
-          'border-grey-200 dark:border-grey-700',
-          'hover:bg-grey-25 hover:dark:bg-grey-900',
-          'hover:text-color-jade transition-all-color',
-          'md:justify-end md:border-0 md:hover:bg-grey-0 md:hover:dark:bg-grey-800',
+          'border-zinc-200 dark:border-zinc-700',
+          'hover:bg-zinc-50 hover:dark:bg-zinc-900',
+          'hover:text-color-emerald transition-all-color',
+          'md:justify-end md:border-0 md:hover:bg-white md:hover:dark:bg-zinc-800',
         ])}
         href={resume.url}
         download='CV_Bastien_PRUVOST_Developpeur_Web'
@@ -39,10 +39,10 @@ export const BannerLinks = ({ className, resume }: BannerLinksProps) => {
 
       <Link
         className={cn([
-          'flex w-full items-center justify-center gap-3 rounded-br-md border-t py-4 px-6',
-          'border-grey-200 dark:border-grey-700',
-          'hover:bg-grey-25 hover:dark:bg-grey-900',
-          'hover:text-color-jade transition-all-color',
+          'flex w-full items-center justify-center gap-3 rounded-br-md border-t px-6 py-4',
+          'border-zinc-200 dark:border-zinc-700',
+          'hover:bg-zinc-50 hover:dark:bg-zinc-900',
+          'hover:text-color-emerald transition-all-color',
           'md:hidden',
         ])}
         href='/contact'

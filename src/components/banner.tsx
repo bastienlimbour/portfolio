@@ -2,11 +2,11 @@
 import { useState } from 'react'
 import { HiMapPin, HiOutlineBars3, HiXMark } from 'react-icons/hi2'
 
-import { cn } from '@/lib/utils/classname'
-import { useOutsideClick } from '@/lib/hooks/use-outside-click'
-import { BannerSocials } from '@/components-ui/banner-socials'
 import { BannerLinks } from '@/components-ui/banner-links'
+import { BannerSocials } from '@/components-ui/banner-socials'
 import { DarkThemeButton } from '@/components-ui/dark-theme-button'
+import { useOutsideClick } from '@/lib/hooks/use-outside-click'
+import { cn } from '@/lib/utils/classname'
 
 import type { PageDetails } from '@/types/sanity-models/page-details'
 
@@ -34,7 +34,7 @@ export const Banner = ({ pageDetails }: BannerProps) => {
       className={cn(
         // 'animation-entry-banner',
         'transition-margin relative flex w-full shrink flex-col rounded-md text-center',
-        'bg-grey-0 shadow-md dark:bg-grey-800',
+        'border border-zinc-50 bg-white shadow-sm dark:border-zinc-700 dark:bg-zinc-800',
         'md:static md:flex-row md:content-center md:items-center md:justify-between',
       )}
     >
@@ -43,7 +43,7 @@ export const Banner = ({ pageDetails }: BannerProps) => {
           className={cn(
             // 'animation-entry-profile-pic',
             'transition-image mx-auto mb-2 rounded-full shadow-md',
-            'border-white dark:border-grey-700',
+            'border-white dark:border-zinc-700',
             isBannerOpen ? '-mt-16 h-32 w-32 border-[5px]' : '-mt-8 h-16 w-16 border-[3px]',
             'md:-mt-16 md:h-32 md:w-32 md:border-[5px]',
           )}
@@ -52,7 +52,7 @@ export const Banner = ({ pageDetails }: BannerProps) => {
 
         <h1 className={cn('mb-1 mt-4 text-xl font-semibold')}>{pageDetails.fullName}</h1>
 
-        <h2 className={cn('text-color-jade mb-2 text-sm font-medium')}>{pageDetails.job}</h2>
+        <h2 className={cn('text-color-emerald mb-2 text-sm font-medium')}>{pageDetails.job}</h2>
 
         <div
           className={cn(
@@ -91,15 +91,15 @@ export const Banner = ({ pageDetails }: BannerProps) => {
 
       <DarkThemeButton
         className={cn(
-          'hover:text-color-jade transition-invert-button absolute pt-[2px]',
-          'left-4 top-4 md:top-1 md:right-1 md:left-auto min-[1180px]:top-7 min-[1180px]:right-8',
+          'hover:text-color-emerald transition-invert-button absolute pt-[2px]',
+          'left-4 top-4 md:left-auto md:right-1 md:top-1 min-[1180px]:right-8 min-[1180px]:top-7',
         )}
       />
 
       <button
         onClick={toggleBanner}
         className={cn(
-          'hover:text-color-jade transition-invert-button absolute top-4 right-4 h-8 w-8',
+          'hover:text-color-emerald transition-invert-button absolute right-4 top-4 h-8 w-8',
           'md:hidden',
         )}
         aria-label={isBannerOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
@@ -107,14 +107,14 @@ export const Banner = ({ pageDetails }: BannerProps) => {
         <HiXMark
           preserveAspectRatio={'xMidYMid slice'}
           className={cn(
-            'absolute top-0 left-0 h-full w-full',
+            'absolute left-0 top-0 h-full w-full',
             isBannerOpen ? 'scale-100 opacity-100' : 'scale-0 opacity-0',
           )}
         />
         <HiOutlineBars3
           preserveAspectRatio={'xMidYMid slice'}
           className={cn(
-            'absolute top-0 left-0 h-full w-full',
+            'absolute left-0 top-0 h-full w-full',
             isBannerOpen ? 'scale-0 opacity-0' : 'scale-100 opacity-100',
           )}
         />

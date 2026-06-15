@@ -1,7 +1,7 @@
 'use client'
 
-import { FormEvent, PropsWithChildren, useState } from 'react'
 import { useReCaptcha } from 'next-recaptcha-v3'
+import { FormEvent, PropsWithChildren, useState } from 'react'
 
 import { cn } from '@/lib/utils/classname'
 import { adjustTextareaHeight } from '@/lib/utils/text-area'
@@ -21,7 +21,7 @@ const Label = ({ htmlFor, children }: PropsWithChildren<{ htmlFor: string }>) =>
   )
 }
 
-const inputStyle = 'rounded-[5px] bg-grey-50 px-3 py-2 dark:bg-grey-700 mb-4'
+const inputStyle = 'rounded-[5px] bg-zinc-50 px-3 py-2 dark:bg-zinc-700 mb-4'
 
 export const ContactForm = () => {
   const [errorMessage, setErrorMessage] = useState('')
@@ -91,13 +91,13 @@ export const ContactForm = () => {
       />
 
       {errorMessage && <p className={cn('mb-4 text-red-800 dark:text-red-300')}>{errorMessage}</p>}
-      {successMessage && <p className={cn('text-color-jade mb-4')}>{successMessage}</p>}
+      {successMessage && <p className={cn('text-color-emerald mb-4')}>{successMessage}</p>}
 
       <button
         className={cn(
           'rounded-[5px] py-2',
-          'font-semibold text-grey-50 dark:text-grey-800',
-          'transition-bg-color bg-jade-700  hover:bg-jade-600 dark:bg-jade-500 hover:dark:bg-jade-400',
+          'font-semibold text-zinc-50 dark:text-zinc-800',
+          'transition-bg-color bg-emerald-700  hover:bg-emerald-600 dark:bg-emerald-500 hover:dark:bg-emerald-400',
         )}
       >
         Envoyer

@@ -24,7 +24,7 @@ export const BannerSocials = ({ className, socials }: BannerSocialsProps) => {
         <Link
           key={social._id}
           href={social.url}
-          className={cn('hover:text-color-jade transition-text-color p-1')}
+          className={cn('hover:text-color-emerald transition-text-color p-1')}
           target='_blank'
           rel='noreferrer'
           aria-label={`Accéder à mon ${social.title}`}

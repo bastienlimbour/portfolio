@@ -23,10 +23,10 @@ export const NavbarLink = ({
   return (
     <li
       className={cn(
-        'shrink grow basis-0 border-x-grey-50 dark:border-x-grey-800',
-        isLinkActive ? 'text-color-jade' : 'bg-grey-25 dark:bg-grey-900',
-        !isLinkActive && 'hover:bg-grey-25 hover:dark:bg-grey-900',
-        'hover:text-color-jade transition-text-color',
+        'shrink grow basis-0 border-x-zinc-50 dark:border-x-zinc-800',
+        isLinkActive ? 'text-color-emerald' : 'bg-zinc-50 dark:bg-zinc-900',
+        !isLinkActive && 'hover:bg-zinc-50 hover:dark:bg-zinc-900',
+        'hover:text-color-emerald transition-text-color',
       )}
     >
       <Link

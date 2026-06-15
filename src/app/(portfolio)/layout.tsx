@@ -1,16 +1,16 @@
 import '@/assets/styles/globals.css'
 import { Poppins } from 'next/font/google'
 
-import { sanityClientFetch } from '@/lib/sanity/sanity.client'
-import { pageDetailsQuery } from '@/lib/sanity/queries/page-details'
-import { cn } from '@/lib/utils/classname'
 import { Providers } from '@/components-providers/providers'
+import { BackgroundParticles } from '@/components-ui/background-particles'
 import { Banner } from '@/components/banner'
 import { Navbar } from '@/components/navbar'
-import { BackgroundParticles } from '@/components-ui/background-particles'
+import { pageDetailsQuery } from '@/lib/sanity/queries/page-details'
+import { sanityClientFetch } from '@/lib/sanity/sanity.client'
+import { cn } from '@/lib/utils/classname'
 
-import type { PropsWithChildren } from 'react'
 import type { PageDetails } from '@/types/sanity-models/page-details'
+import type { PropsWithChildren } from 'react'
 
 export const metadata = {
   title: 'Portfolio Bastien Pruvost | Développeur Web Front-End',
@@ -63,7 +63,7 @@ const HomeLayout = async ({ children }: PropsWithChildren) => {
           'relative z-0 h-full w-full',
           'flex items-center justify-center',
           'text-color-base font-poppins',
-          'bg-grey-50 dark:bg-grey-1000',
+          'bg-zinc-50 dark:bg-zinc-900',
           poppins.className,
         )}
       >
@@ -78,10 +78,9 @@ const HomeLayout = async ({ children }: PropsWithChildren) => {
           <Banner pageDetails={pageDetails} />
           <div
             className={cn(
-              'dark:shadow-left-md relative z-10 w-full overflow-hidden rounded-md shadow-md lg:h-full',
+              'relative z-10 w-full overflow-hidden rounded-md lg:h-full',
               'flex grow flex-col',
-              // 'animation-entry-app ',
-              'bg-grey-0 dark:bg-grey-800',
+              'border border-zinc-100 bg-white shadow-sm dark:border-zinc-700 dark:bg-zinc-800',
             )}
           >
             <Navbar />

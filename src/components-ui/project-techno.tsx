@@ -13,7 +13,7 @@ export const ProjectTechno = ({ techno }: ProjectTechnoProps) => {
       className={cn(
         'rounded-full px-2 py-1 shadow-sm',
         'flex items-center gap-2',
-        'border border-grey-50 bg-white dark:border-grey-700 dark:bg-grey-700',
+        'border border-zinc-50 bg-white dark:border-zinc-700 dark:bg-zinc-700',
       )}
     >
       <DynamicIcon iconName={techno.iconName} label={`Logo ${techno.title}`} className='h-4 w-4' />

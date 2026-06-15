@@ -1,6 +1,6 @@
 'use client'
-import { useEffect, useState } from 'react'
 import { cn } from '@/lib/utils/classname'
+import { useEffect, useState } from 'react'
 
 export const ContactInformations = () => {
   const [tel, setTel] = useState<string | null>(null)
@@ -31,7 +31,7 @@ export const ContactInformations = () => {
           <a
             href={`mailto:${email}`}
             className={cn(
-              'text-color-jade animation-entry-confidentials inline-block hover:underline',
+              'text-color-emerald animation-entry-confidentials inline-block hover:underline',
             )}
           >
             {email}
@@ -44,7 +44,7 @@ export const ContactInformations = () => {
           <a
             href={`tel:${tel}`}
             className={cn(
-              'text-color-jade animation-entry-confidentials -mb-[2px] inline-block hover:underline',
+              'text-color-emerald animation-entry-confidentials -mb-[2px] inline-block hover:underline',
             )}
           >
             {telDisplay}

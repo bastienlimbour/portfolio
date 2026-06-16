@@ -8,6 +8,7 @@ export type Project = SanityDocument & {
   mainImage: ImageAsset
   technos: Techno[]
   description: PortableTextBlock[]
+  projectType?: string
   publishedAt: Date
   githubLink: string
   websiteLink: string

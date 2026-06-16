@@ -46,6 +46,11 @@ export default defineType({
         rule.required().min(1).max(90).error('Min 1 charactères, Max 90 charactères'),
     }),
     defineField({
+      name: 'projectType',
+      title: 'Type de projet',
+      type: 'string',
+    }),
+    defineField({
       name: 'publishedAt',
       title: 'Date de création du site',
       type: 'date',

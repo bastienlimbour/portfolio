@@ -13,6 +13,8 @@ type ProjectCardProps = {
 }
 
 export const ProjectCard = ({ project }: ProjectCardProps) => {
+  const projectYear = new Date(project.publishedAt.toString()).getFullYear()
+
   return (
     <div
       className={cn(
@@ -31,7 +33,15 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
       />
 
       <div className={cn('flex grow flex-col justify-start p-4 pt-3')}>
-        <h3 className={cn('text-color-emerald mb-2 font-semibold lg:text-lg')}>{project.title}</h3>
+        <h3 className={cn('text-color-emerald mb-1 font-semibold lg:text-lg')}>{project.title}</h3>
+
+        {(project.projectType || Number.isFinite(projectYear)) && (
+          <p className={cn('mb-3 text-xs font-normal text-zinc-500 dark:text-zinc-400')}>
+            {project.projectType}
+            {project.projectType && Number.isFinite(projectYear) && ' · '}
+            {Number.isFinite(projectYear) && projectYear}
+          </p>
+        )}
 
         <div className={cn('prose-projects mb-4')}>
           <PortableText value={project.description} />

@@ -24,18 +24,18 @@ export const Navbar = () => {
           ariaLabel='Accéder au profil'
         />
         <NavbarLink
-          href='/skills'
-          label='Compétences'
-          IconComponent={HiOutlineCommandLine}
-          currentRoute={currentRoute}
-          ariaLabel='Accéder aux compétences'
-        />
-        <NavbarLink
           href='/projects'
           label='Projets'
           IconComponent={HiOutlineInboxStack}
           currentRoute={currentRoute}
           ariaLabel='Accéder aux projets'
+        />
+        <NavbarLink
+          href='/skills'
+          label='Compétences'
+          IconComponent={HiOutlineCommandLine}
+          currentRoute={currentRoute}
+          ariaLabel='Accéder aux compétences'
         />
         <NavbarLink
           href='/contact'

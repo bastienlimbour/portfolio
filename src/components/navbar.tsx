@@ -1,11 +1,11 @@
 'use client'
-import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils/classname'
+import { usePathname } from 'next/navigation'
 
 import {
-  HiOutlineIdentification,
   HiOutlineChatBubbleOvalLeftEllipsis,
   HiOutlineCommandLine,
+  HiOutlineIdentification,
   HiOutlineInboxStack,
 } from 'react-icons/hi2'
 
@@ -16,7 +16,11 @@ export const Navbar = () => {
 
   return (
     <nav>
-      <ul className={cn('flex justify-center divide-x')}>
+      <ul
+        className={cn(
+          'flex justify-center divide-x border-b border-b-zinc-100 dark:border-b-zinc-700',
+        )}
+      >
         <NavbarLink
           href='/profile'
           label='Profil'

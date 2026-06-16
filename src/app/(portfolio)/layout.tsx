@@ -63,7 +63,7 @@ const HomeLayout = async ({ children }: PropsWithChildren) => {
           'relative z-0 h-full w-full',
           'flex items-center justify-center',
           'text-color-base font-poppins',
-          'bg-zinc-50 dark:bg-zinc-900',
+          'bg-zinc-100 dark:bg-zinc-900',
           poppins.className,
         )}
       >

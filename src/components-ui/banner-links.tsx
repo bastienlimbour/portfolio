@@ -21,7 +21,7 @@ export const BannerLinks = ({ className, resume }: BannerLinksProps) => {
       <Link
         className='hover:text-color-emerald transition-all-color flex w-full items-center justify-center gap-3 rounded-bl-md border-t border-zinc-200 py-4 hover:bg-zinc-50 dark:border-zinc-700 hover:dark:bg-zinc-900 sm:border-r md:justify-end md:border-0 md:border-r-0 md:hover:bg-white md:hover:dark:bg-zinc-800'
         href={resume.url}
-        download='CV_Bastien_PRUVOST_Developpeur_Web'
+        download='CV_Bastien_Limbour_Developpeur_Full_Stack'
         target='_blank'
       >
         <span className='text-sm font-medium'>Télécharger mon CV</span>

@@ -1,4 +1,3 @@
-import React from 'react'
 import Image from 'next/image'
 
 import { cn } from '@/lib/utils/classname'
@@ -16,7 +15,7 @@ export const ProfilePic = ({ className, profilePic }: ProfilePicProps) => {
     <Image
       className={cn(className, 'object-contain')}
       src={profilePic.url}
-      alt='Bastien Pruvost - Développeur Web'
+      alt='Bastien Limbour - Développeur Full Stack'
       quality={100}
       sizes='208px'
       width={208}

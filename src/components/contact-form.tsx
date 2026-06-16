@@ -27,7 +27,7 @@ export const ContactForm = () => {
   const { executeRecaptcha } = useReCaptcha()
 
   const retryMessage =
-    'Veuillez rafraichir la page et réessayer ou envoyer votre message par mail à contact@pruvostbastien.fr'
+    'Veuillez rafraichir la page et réessayer ou envoyer votre message directement via les réseaux sociaux.'
 
   const sendMail = async (data: DataSent) => {
     const res = await fetch('/api/mail', {

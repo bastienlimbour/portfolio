@@ -13,23 +13,23 @@ import type { PageDetails } from '@/types/sanity-models/page-details'
 import type { PropsWithChildren } from 'react'
 
 export const metadata = {
-  title: 'Portfolio Bastien Pruvost | Développeur Web Front-End',
+  title: 'Portfolio Bastien Limbour | Développeur Full Stack',
   description:
-    'Portfolio de Bastien Pruvost. Développeur Web Frontend spécialisé dans la création de sites web en Javascript, TypeScript, React et Node.js.',
-  creator: 'Bastien Pruvost',
+    'Portfolio de Bastien Limbour. Développeur Full Stack spécialisé dans la création de sites web en Javascript, TypeScript, React et Node.js.',
+  creator: 'Bastien Limbour',
   openGraph: {
     locale: 'fr-FR',
-    title: 'Portfolio Bastien Pruvost | Développeur Web Front-End',
+    title: 'Portfolio Bastien Limbour | Développeur Full Stack',
     description:
-      'Portfolio de Bastien Pruvost. Développeur Web Frontend spécialisé dans la création de sites web en Javascript, TypeScript, React et Node.js.',
-    url: 'https://www.pruvostbastien.fr',
-    siteName: 'Portfolio Bastien Pruvost | Développeur Web Front-End',
+      'Portfolio de Bastien Limbour. Développeur Full Stack spécialisé dans la création de sites web en Javascript, TypeScript, React et Node.js.',
+    url: 'https://bastienlimbour.com',
+    siteName: 'Portfolio Bastien Limbour | Développeur Full Stack',
     images: [
       {
-        url: 'https://www.pruvostbastien.fr/og.jpeg',
+        url: 'https://bastienlimbour.com/og.jpg',
         width: 1200,
         height: 600,
-        alt: 'Portfolio Bastien Pruvost | Développeur web front-end',
+        alt: 'Portfolio Bastien Limbour | Développeur Full Stack',
       },
     ],
   },

@@ -39,7 +39,7 @@ export const DarkThemeButton = ({ className }: DarkThemeButtonProps) => {
         )}
         aria-label='Activer le theme sombre (Mode nuit)'
       >
-        <HiOutlineMoon preserveAspectRatio={'xMidYMid slice'} className={cn('h-7 w-7')} />
+        <HiOutlineMoon preserveAspectRatio={'xMidYMid slice'} className='h-7 w-7' />
       </button>
 
       <button
@@ -51,7 +51,7 @@ export const DarkThemeButton = ({ className }: DarkThemeButtonProps) => {
         )}
         aria-label='Activer le theme clair (Mode jour)'
       >
-        <HiOutlineSun preserveAspectRatio={'xMidYMid slice'} className={cn('h-7 w-7')} />
+        <HiOutlineSun preserveAspectRatio={'xMidYMid slice'} className='h-7 w-7' />
       </button>
     </>
   )

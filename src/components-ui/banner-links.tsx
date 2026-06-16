@@ -19,38 +19,23 @@ export const BannerLinks = ({ className, resume }: BannerLinksProps) => {
       )}
     >
       <Link
-        className={cn([
-          'flex w-full items-center justify-center gap-3 rounded-bl-md border-t py-4 sm:border-r md:border-r-0',
-          'border-zinc-200 dark:border-zinc-700',
-          'hover:bg-zinc-50 hover:dark:bg-zinc-900',
-          'hover:text-color-emerald transition-all-color',
-          'md:justify-end md:border-0 md:hover:bg-white md:hover:dark:bg-zinc-800',
-        ])}
+        className='hover:text-color-emerald transition-all-color flex w-full items-center justify-center gap-3 rounded-bl-md border-t border-zinc-200 py-4 hover:bg-zinc-50 dark:border-zinc-700 hover:dark:bg-zinc-900 sm:border-r md:justify-end md:border-0 md:border-r-0 md:hover:bg-white md:hover:dark:bg-zinc-800'
         href={resume.url}
         download='CV_Bastien_PRUVOST_Developpeur_Web'
         target='_blank'
       >
-        <span className={cn('text-sm font-medium')}>Télécharger mon CV</span>
-        <HiOutlineArrowDownOnSquare
-          preserveAspectRatio={'xMidYMid slice'}
-          className={cn('h-6 w-4')}
-        />
+        <span className='text-sm font-medium'>Télécharger mon CV</span>
+        <HiOutlineArrowDownOnSquare preserveAspectRatio={'xMidYMid slice'} className='h-6 w-4' />
       </Link>
 
       <Link
-        className={cn([
-          'flex w-full items-center justify-center gap-3 rounded-br-md border-t px-6 py-4',
-          'border-zinc-200 dark:border-zinc-700',
-          'hover:bg-zinc-50 hover:dark:bg-zinc-900',
-          'hover:text-color-emerald transition-all-color',
-          'md:hidden',
-        ])}
+        className='hover:text-color-emerald transition-all-color flex w-full items-center justify-center gap-3 rounded-br-md border-t border-zinc-200 px-6 py-4 hover:bg-zinc-50 dark:border-zinc-700 hover:dark:bg-zinc-900 md:hidden'
         href='/contact'
       >
-        <span className={cn('text-sm font-medium')}>Me contacter</span>
+        <span className='text-sm font-medium'>Me contacter</span>
         <HiOutlineChatBubbleOvalLeftEllipsis
           preserveAspectRatio={'xMidYMid slice'}
-          className={cn('h-6 w-5')}
+          className='h-6 w-5'
         />
       </Link>
     </div>

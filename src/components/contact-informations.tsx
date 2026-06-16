@@ -1,5 +1,4 @@
 'use client'
-import { cn } from '@/lib/utils/classname'
 import { useEffect, useState } from 'react'
 
 export const ContactInformations = () => {
@@ -25,27 +24,23 @@ export const ContactInformations = () => {
 
   return (
     <div>
-      <div className={cn('mb-3')}>
-        <span className={cn('text-color-light')}>Email : </span>
+      <div className='mb-3'>
+        <span className='text-color-light'>Email : </span>
         {email && (
           <a
             href={`mailto:${email}`}
-            className={cn(
-              'text-color-emerald animation-entry-confidentials inline-block hover:underline',
-            )}
+            className='text-color-emerald animation-entry-confidentials inline-block hover:underline'
           >
             {email}
           </a>
         )}
       </div>
-      <div className={cn('')}>
-        <span className={cn('text-color-light')}>Téléphone : </span>
+      <div>
+        <span className='text-color-light'>Téléphone : </span>
         {telDisplay && tel && (
           <a
             href={`tel:${tel}`}
-            className={cn(
-              'text-color-emerald animation-entry-confidentials -mb-[2px] inline-block hover:underline',
-            )}
+            className='text-color-emerald animation-entry-confidentials -mb-[2px] inline-block hover:underline'
           >
             {telDisplay}
           </a>

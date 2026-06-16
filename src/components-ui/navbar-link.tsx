@@ -31,11 +31,11 @@ export const NavbarLink = ({
     >
       <Link
         href={href}
-        className={cn('flex flex-col items-center gap-1 p-4 -outline-offset-1')}
+        className='flex flex-col items-center gap-1 p-4 -outline-offset-1'
         aria-label={ariaLabel}
       >
-        <IconComponent preserveAspectRatio={'xMidYMid slice'} className={cn('h-6 w-6')} />
-        <span className={cn('-mb-1 hidden text-sm sm:block')}>{label}</span>
+        <IconComponent preserveAspectRatio={'xMidYMid slice'} className='h-6 w-6' />
+        <span className='-mb-1 hidden text-sm sm:block'>{label}</span>
       </Link>
     </li>
   )

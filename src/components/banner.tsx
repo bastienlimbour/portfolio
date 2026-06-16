@@ -31,14 +31,9 @@ export const Banner = ({ pageDetails }: BannerProps) => {
   return (
     <header
       ref={containerRef}
-      className={cn(
-        // 'animation-entry-banner',
-        'transition-margin relative flex w-full shrink flex-col rounded-md text-center',
-        'border border-zinc-50 bg-white shadow-sm dark:border-zinc-700 dark:bg-zinc-800',
-        'md:static md:flex-row md:content-center md:items-center md:justify-between',
-      )}
+      className='transition-margin relative flex w-full shrink flex-col rounded-md border border-zinc-100 bg-white text-center shadow-sm dark:border-zinc-700 dark:bg-zinc-800 md:static md:flex-row md:content-center md:items-center md:justify-between'
     >
-      <div className={cn('md:order-2')}>
+      <div className='md:order-2'>
         {/* <BannerProfilePic
           className={cn(
             // 'animation-entry-profile-pic',
@@ -50,19 +45,12 @@ export const Banner = ({ pageDetails }: BannerProps) => {
           profilePic={pageDetails.profilePic}
         /> */}
 
-        <h1 className={cn('mb-1 mt-4 text-xl font-semibold')}>{pageDetails.fullName}</h1>
+        <h1 className='mb-1 mt-4 text-xl font-semibold'>{pageDetails.fullName}</h1>
 
-        <h2 className={cn('text-color-emerald mb-2 text-sm font-medium')}>{pageDetails.job}</h2>
+        <h2 className='text-color-emerald mb-2 text-sm font-medium'>{pageDetails.job}</h2>
 
-        <div
-          className={cn(
-            'text-color-light transition-text-size mb-4 flex items-center justify-center gap-1.5 text-sm font-medium',
-          )}
-        >
-          <HiMapPin
-            preserveAspectRatio={'xMidYMid slice'}
-            className={cn('transition-image h-4 w-3')}
-          />
+        <div className='text-color-light transition-text-size mb-4 flex items-center justify-center gap-1.5 text-sm font-medium'>
+          <HiMapPin preserveAspectRatio={'xMidYMid slice'} className='transition-image h-4 w-3' />
           <p>{pageDetails.city}</p>
         </div>
       </div>
@@ -89,19 +77,11 @@ export const Banner = ({ pageDetails }: BannerProps) => {
 
       {/* BUTTONS Dark Theme / Toggle Banner*/}
 
-      <DarkThemeButton
-        className={cn(
-          'hover:text-color-emerald transition-invert-button absolute pt-[2px]',
-          'left-4 top-4 md:left-auto md:right-1 md:top-1 min-[1180px]:right-8 min-[1180px]:top-7',
-        )}
-      />
+      <DarkThemeButton className='hover:text-color-emerald transition-invert-button absolute left-4 top-4 pt-[2px] md:left-auto md:right-1 md:top-1 min-[1180px]:right-8 min-[1180px]:top-7' />
 
       <button
         onClick={toggleBanner}
-        className={cn(
-          'hover:text-color-emerald transition-invert-button absolute right-4 top-4 h-8 w-8',
-          'md:hidden',
-        )}
+        className='hover:text-color-emerald transition-invert-button absolute right-4 top-4 h-8 w-8 md:hidden'
         aria-label={isBannerOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
       >
         <HiXMark

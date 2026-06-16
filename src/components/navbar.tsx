@@ -1,5 +1,4 @@
 'use client'
-import { cn } from '@/lib/utils/classname'
 import { usePathname } from 'next/navigation'
 
 import {
@@ -16,11 +15,7 @@ export const Navbar = () => {
 
   return (
     <nav>
-      <ul
-        className={cn(
-          'flex justify-center divide-x border-b border-b-zinc-100 dark:border-b-zinc-700',
-        )}
-      >
+      <ul className='flex justify-center divide-x border-b border-b-zinc-100 dark:border-b-zinc-700'>
         <NavbarLink
           href='/profile'
           label='Profil'

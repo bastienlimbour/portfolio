@@ -5,8 +5,6 @@ import { useTheme } from 'next-themes'
 import { loadSlim } from 'tsparticles-slim'
 import Particles from 'react-tsparticles'
 
-import { cn } from '@/lib/utils/classname'
-
 import type { Engine, IOptions, RecursivePartial } from 'tsparticles-engine'
 
 export const BackgroundParticles = () => {
@@ -26,7 +24,7 @@ export const BackgroundParticles = () => {
   return (
     <Particles
       id='tsparticles'
-      className={cn('animation-entry-particles fixed left-0 top-0 -z-[1] h-screen w-screen')}
+      className='animation-entry-particles fixed left-0 top-0 -z-[1] h-screen w-screen'
       init={particlesInit}
       options={
         {

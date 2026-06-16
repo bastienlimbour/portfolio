@@ -1,6 +1,5 @@
 import { sanityClientFetch } from '@/lib/sanity/sanity.client'
 import { projectsQuery } from '@/lib/sanity/queries/project'
-import { cn } from '@/lib/utils/classname'
 import { ProjectCard } from '@/components-ui/project-card'
 
 import type { Project } from '@/types/sanity-models/project'
@@ -20,12 +19,7 @@ const ProjectsPage = async () => {
   return (
     <PageLayout title={pageDetails.projectsTitle}>
       <Wrapper>
-        <div
-          className={cn(
-            'my-4 grid gap-4 lg:my-6 lg:gap-6',
-            'min-[540px]:grid-cols-2 min-[800px]:grid-cols-3',
-          )}
-        >
+        <div className='my-4 grid gap-4 min-[540px]:grid-cols-2 min-[800px]:grid-cols-3 lg:my-6 lg:gap-6'>
           {projects &&
             projects.map(
               (project) => project && <ProjectCard key={project._id} project={project} />,

@@ -3,7 +3,6 @@
 import { useReCaptcha } from 'next-recaptcha-v3'
 import { FormEvent, PropsWithChildren, useState } from 'react'
 
-import { cn } from '@/lib/utils/classname'
 import { adjustTextareaHeight } from '@/lib/utils/text-area'
 
 type MailData = { fullName: string; email: string; message: string }
@@ -15,13 +14,11 @@ type DataSent = {
 
 const Label = ({ htmlFor, children }: PropsWithChildren<{ htmlFor: string }>) => {
   return (
-    <label htmlFor={htmlFor} className={cn('text-color-light mb-1.5 ml-0.5')}>
+    <label htmlFor={htmlFor} className='text-color-light mb-1.5 ml-0.5'>
       {children}
     </label>
   )
 }
-
-const inputStyle = 'rounded-[5px] bg-zinc-50 px-3 py-2 dark:bg-zinc-700 mb-4'
 
 export const ContactForm = () => {
   const [errorMessage, setErrorMessage] = useState('')
@@ -74,32 +71,38 @@ export const ContactForm = () => {
 
   return (
     // <RecaptchaProvider>
-    <form onSubmit={handleSubmit} className={cn('flex flex-col')}>
+    <form onSubmit={handleSubmit} className='flex flex-col'>
       <Label htmlFor='fullname'>Votre nom :</Label>
-      <input type='text' name='fullname' id='fullname' className={cn(inputStyle)} required />
+      <input
+        type='text'
+        name='fullname'
+        id='fullname'
+        className='mb-4 rounded-[5px] bg-zinc-50 px-3 py-2 dark:bg-zinc-700'
+        required
+      />
 
       <Label htmlFor='email'>Votre email :</Label>
-      <input type='email' name='email' id='email' className={cn(inputStyle)} required />
+      <input
+        type='email'
+        name='email'
+        id='email'
+        className='mb-4 rounded-[5px] bg-zinc-50 px-3 py-2 dark:bg-zinc-700'
+        required
+      />
 
       <Label htmlFor='message'>Votre message :</Label>
       <textarea
         name='message'
         id='message'
-        className={cn(inputStyle, 'h-28 resize-none')}
+        className='mb-4 h-28 resize-none rounded-[5px] bg-zinc-50 px-3 py-2 dark:bg-zinc-700'
         required
         onInput={adjustTextareaHeight}
       />
 
-      {errorMessage && <p className={cn('mb-4 text-red-800 dark:text-red-300')}>{errorMessage}</p>}
-      {successMessage && <p className={cn('text-color-emerald mb-4')}>{successMessage}</p>}
+      {errorMessage && <p className='mb-4 text-red-800 dark:text-red-300'>{errorMessage}</p>}
+      {successMessage && <p className='text-color-emerald mb-4'>{successMessage}</p>}
 
-      <button
-        className={cn(
-          'rounded-[5px] py-2',
-          'font-semibold text-zinc-50 dark:text-zinc-800',
-          'transition-bg-color bg-emerald-700  hover:bg-emerald-600 dark:bg-emerald-500 hover:dark:bg-emerald-400',
-        )}
-      >
+      <button className='transition-bg-color rounded-[5px] bg-emerald-700 py-2 font-semibold text-zinc-50 hover:bg-emerald-600 dark:bg-emerald-500 dark:text-zinc-800 hover:dark:bg-emerald-400'>
         Envoyer
       </button>
     </form>

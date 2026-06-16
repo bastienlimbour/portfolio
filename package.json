@@ -10,7 +10,7 @@
     "start": "next start",
     "buildstart": "next build && next start",
     "lint": "next lint",
-    "format": "prettier --write ./",
+    "format": "prettier --write ./src",
     "ts": "tsc --project tsconfig.json"
   },
   "dependencies": {
